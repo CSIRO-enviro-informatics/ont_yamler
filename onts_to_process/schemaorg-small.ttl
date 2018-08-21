@@ -1,0 +1,504 @@
+@prefix : <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    rdfs:label "Schema.org Vocabulary" ;
+    dcterms:modified "2018-06-12"^^xsd:dat ;
+    owl:versionInfo "3.4"^^xsd:string .
+
+:AMRadioChannel a owl:Class ;
+    rdfs:label "AMRadioChannel"@en ;
+    rdfs:comment "A radio channel that uses AM."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/AMRadioChannel> ;
+    rdfs:subClassOf :RadioChannel .
+
+:AcceptAction a owl:Class ;
+    rdfs:label "AcceptAction"@en ;
+    rdfs:comment """The act of committing to/adopting an object.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/RejectAction">RejectAction</a>: The antonym of AcceptAction.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/AcceptAction> ;
+    rdfs:subClassOf :AllocateAction .
+
+:AccountingService a owl:Class ;
+    rdfs:label "AccountingService"@en ;
+    rdfs:comment """Accountancy business.<br/><br/>
+
+As a <a href="http://schema.org/LocalBusiness">LocalBusiness</a> it can be described as a <a href="http://schema.org/provider">provider</a> of one or more <a href="http://schema.org/Service">Service</a>(s)."""@en ;
+    rdfs:isDefinedBy <https://schema.org/AccountingService> ;
+    rdfs:subClassOf :FinancialService .
+
+:ActivateAction a owl:Class ;
+    rdfs:label "ActivateAction"@en ;
+    rdfs:comment "The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight)."@en ;
+    rdfs:isDefinedBy <https://schema.org/ActivateAction> ;
+    rdfs:subClassOf :ControlAction .
+
+:AdultEntertainment a owl:Class ;
+    rdfs:label "AdultEntertainment"@en ;
+    rdfs:comment "An adult entertainment establishment."@en ;
+    rdfs:isDefinedBy <https://schema.org/AdultEntertainment> ;
+    rdfs:subClassOf :EntertainmentBusiness .
+
+:AdvertiserContentArticle a owl:Class ;
+    rdfs:label "AdvertiserContentArticle"@en ;
+    rdfs:comment "An <a href=\"http://schema.org/Article\">Article</a> that an external entity has paid to place or to produce to its specifications. Includes <a href=\"https://en.wikipedia.org/wiki/Advertorial\">advertorials</a>, sponsored content, native advertising and other paid content."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/AdvertiserContentArticle> ;
+    rdfs:subClassOf :Article .
+
+:AgreeAction a owl:Class ;
+    rdfs:label "AgreeAction"@en ;
+    rdfs:comment "The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants."@en ;
+    rdfs:isDefinedBy <https://schema.org/AgreeAction> ;
+    rdfs:subClassOf :ReactAction .
+
+:AmusementPark a owl:Class ;
+    rdfs:label "AmusementPark"@en ;
+    rdfs:comment "An amusement park."@en ;
+    rdfs:isDefinedBy <https://schema.org/AmusementPark> ;
+    rdfs:subClassOf :EntertainmentBusiness .
+
+:AnalysisNewsArticle a owl:Class ;
+    rdfs:label "AnalysisNewsArticle"@en ;
+    rdfs:comment "An AnalysisNewsArticle is a <a href=\"http://schema.org/NewsArticle\">NewsArticle</a> that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/AnalysisNewsArticle> ;
+    rdfs:subClassOf :NewsArticle .
+
+:AnimalShelter a owl:Class ;
+    rdfs:label "AnimalShelter"@en ;
+    rdfs:comment "Animal shelter."@en ;
+    rdfs:isDefinedBy <https://schema.org/AnimalShelter> ;
+    rdfs:subClassOf :LocalBusiness .
+
+:ApartmentComplex a owl:Class ;
+    rdfs:label "ApartmentComplex"@en ;
+    rdfs:comment "Residence type: Apartment complex."@en ;
+    rdfs:isDefinedBy <https://schema.org/ApartmentComplex> ;
+    rdfs:subClassOf :Residence .
+
+:AppendAction a owl:Class ;
+    rdfs:label "AppendAction"@en ;
+    rdfs:comment "The act of inserting at the end if an ordered collection."@en ;
+    rdfs:isDefinedBy <https://schema.org/AppendAction> ;
+    rdfs:subClassOf :InsertAction .
+
+:ApplyAction a owl:Class ;
+    rdfs:label "ApplyAction"@en ;
+    rdfs:comment """The act of registering to an organization/service without the guarantee to receive it.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/RegisterAction">RegisterAction</a>: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/ApplyAction> ;
+    rdfs:subClassOf :OrganizeAction .
+
+:ApprovedIndication a owl:Class ;
+    rdfs:label "ApprovedIndication"@en ;
+    rdfs:comment "An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US."@en ;
+    rdfs:isDefinedBy <https://health-lifesci.schema.org/ApprovedIndication> ;
+    rdfs:subClassOf :MedicalIndication .
+
+:Aquarium a owl:Class ;
+    rdfs:label "Aquarium"@en ;
+    rdfs:comment "Aquarium."@en ;
+    rdfs:isDefinedBy <https://schema.org/Aquarium> ;
+    rdfs:subClassOf :CivicStructure .
+
+:ArriveAction a owl:Class ;
+    rdfs:label "ArriveAction"@en ;
+    rdfs:comment "The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants."@en ;
+    rdfs:isDefinedBy <https://schema.org/ArriveAction> ;
+    rdfs:subClassOf :MoveAction .
+
+:ArtGallery a owl:Class ;
+    rdfs:label "ArtGallery"@en ;
+    rdfs:comment "An art gallery."@en ;
+    rdfs:isDefinedBy <https://schema.org/ArtGallery> ;
+    rdfs:subClassOf :EntertainmentBusiness .
+
+:AskPublicNewsArticle a owl:Class ;
+    rdfs:label "AskPublicNewsArticle"@en ;
+    rdfs:comment "A <a href=\"http://schema.org/NewsArticle\">NewsArticle</a> expressing an open call by a <a href=\"http://schema.org/NewsMediaOrganization\">NewsMediaOrganization</a> asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/AskPublicNewsArticle> ;
+    rdfs:subClassOf :NewsArticle .
+
+:AssignAction a owl:Class ;
+    rdfs:label "AssignAction"@en ;
+    rdfs:comment "The act of allocating an action/event/task to some destination (someone or something)."@en ;
+    rdfs:isDefinedBy <https://schema.org/AssignAction> ;
+    rdfs:subClassOf :AllocateAction .
+
+:Atlas a owl:Class ;
+    rdfs:label "Atlas"@en ;
+    rdfs:comment "A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject."@en ;
+    rdfs:isDefinedBy <https://bib.schema.org/Atlas> ;
+    rdfs:subClassOf :CreativeWork .
+
+:Attorney a owl:Class ;
+    rdfs:label "Attorney"@en ;
+    rdfs:comment """Professional service: Attorney. <br/><br/>
+
+This type is deprecated - <a href="http://schema.org/LegalService">LegalService</a> is more inclusive and less ambiguous."""@en ;
+    rdfs:isDefinedBy <https://schema.org/Attorney> ;
+    rdfs:subClassOf :LegalService .
+
+:AutoBodyShop a owl:Class ;
+    rdfs:label "AutoBodyShop"@en ;
+    rdfs:comment "Auto body shop."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoBodyShop> ;
+    rdfs:subClassOf :AutomotiveBusiness .
+
+:AutoDealer a owl:Class ;
+    rdfs:label "AutoDealer"@en ;
+    rdfs:comment "An car dealership."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoDealer> ;
+    rdfs:subClassOf :AutomotiveBusiness .
+
+:AutoPartsStore a owl:Class ;
+    rdfs:label "AutoPartsStore"@en ;
+    rdfs:comment "An auto parts store."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoPartsStore> ;
+    rdfs:subClassOf :AutomotiveBusiness,
+        :Store .
+
+:AutoRental a owl:Class ;
+    rdfs:label "AutoRental"@en ;
+    rdfs:comment "A car rental business."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoRental> ;
+    rdfs:subClassOf :AutomotiveBusiness .
+
+:AutoRepair a owl:Class ;
+    rdfs:label "AutoRepair"@en ;
+    rdfs:comment "Car repair business."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoRepair> ;
+    rdfs:subClassOf :AutomotiveBusiness .
+
+:AutoWash a owl:Class ;
+    rdfs:label "AutoWash"@en ;
+    rdfs:comment "A car wash business."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutoWash> ;
+    rdfs:subClassOf :AutomotiveBusiness .
+
+:AutomatedTeller a owl:Class ;
+    rdfs:label "AutomatedTeller"@en ;
+    rdfs:comment "ATM/cash machine."@en ;
+    rdfs:isDefinedBy <https://schema.org/AutomatedTeller> ;
+    rdfs:subClassOf :FinancialService .
+
+:BackgroundNewsArticle a owl:Class ;
+    rdfs:label "BackgroundNewsArticle"@en ;
+    rdfs:comment "A <a href=\"http://schema.org/NewsArticle\">NewsArticle</a> providing historical context, definition and detail on a specific topic (aka \"explainer\" or \"backgrounder\"). For example, an in-depth article or frequently-asked-questions (<a href=\"https://en.wikipedia.org/wiki/FAQ\">FAQ</a>) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using <a href=\"http://schema.org/Book\">Book</a> or <a href=\"http://schema.org/Article\">Article</a>, in particular <a href=\"http://schema.org/ScholarlyArticle\">ScholarlyArticle</a>. See also <a href=\"http://schema.org/NewsArticle\">NewsArticle</a> for related vocabulary from a learning/education perspective."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/BackgroundNewsArticle> ;
+    rdfs:subClassOf :NewsArticle .
+
+:Bakery a owl:Class ;
+    rdfs:label "Bakery"@en ;
+    rdfs:comment "A bakery."@en ;
+    rdfs:isDefinedBy <https://schema.org/Bakery> ;
+    rdfs:subClassOf :FoodEstablishment .
+
+:BarOrPub a owl:Class ;
+    rdfs:label "BarOrPub"@en ;
+    rdfs:comment "A bar or pub."@en ;
+    rdfs:isDefinedBy <https://schema.org/BarOrPub> ;
+    rdfs:subClassOf :FoodEstablishment .
+
+:Barcode a owl:Class ;
+    rdfs:label "Barcode"@en ;
+    rdfs:comment "An image of a visual machine-readable code such as a barcode or QR code."@en ;
+    rdfs:isDefinedBy <https://schema.org/Barcode> ;
+    rdfs:subClassOf :ImageObject .
+
+:Beach a owl:Class ;
+    rdfs:label "Beach"@en ;
+    rdfs:comment "Beach."@en ;
+    rdfs:isDefinedBy <https://schema.org/Beach> ;
+    rdfs:subClassOf :CivicStructure .
+
+:BeautySalon a owl:Class ;
+    rdfs:label "BeautySalon"@en ;
+    rdfs:comment "Beauty salon."@en ;
+    rdfs:isDefinedBy <https://schema.org/BeautySalon> ;
+    rdfs:subClassOf :HealthAndBeautyBusiness .
+
+:BedAndBreakfast a owl:Class ;
+    rdfs:label "BedAndBreakfast"@en ;
+    rdfs:comment """Bed and breakfast.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>."""@en ;
+    rdfs:isDefinedBy <https://schema.org/BedAndBreakfast> ;
+    rdfs:subClassOf :LodgingBusiness .
+
+:BefriendAction a owl:Class ;
+    rdfs:label "BefriendAction"@en ;
+    rdfs:comment """The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/BefriendAction> ;
+    rdfs:subClassOf :InteractAction .
+
+:BikeStore a owl:Class ;
+    rdfs:label "BikeStore"@en ;
+    rdfs:comment "A bike store."@en ;
+    rdfs:isDefinedBy <https://schema.org/BikeStore> ;
+    rdfs:subClassOf :Store .
+
+:BloodTest a owl:Class ;
+    rdfs:label "BloodTest"@en ;
+    rdfs:comment "A medical test performed on a sample of a patient's blood."@en ;
+    rdfs:isDefinedBy <https://health-lifesci.schema.org/BloodTest> ;
+    rdfs:subClassOf :MedicalTest .
+
+:Bone a owl:Class ;
+    rdfs:label "Bone"@en ;
+    rdfs:comment "Rigid connective tissue that comprises up the skeletal structure of the human body."@en ;
+    rdfs:isDefinedBy <https://health-lifesci.schema.org/Bone> ;
+    rdfs:subClassOf :AnatomicalStructure .
+
+:BookSeries a owl:Class ;
+    rdfs:label "BookSeries"@en ;
+    rdfs:comment "A series of books. Included books can be indicated with the hasPart property."@en ;
+    rdfs:isDefinedBy <https://schema.org/BookSeries> ;
+    rdfs:subClassOf :CreativeWorkSeries .
+
+:BookStore a owl:Class ;
+    rdfs:label "BookStore"@en ;
+    rdfs:comment "A bookstore."@en ;
+    rdfs:isDefinedBy <https://schema.org/BookStore> ;
+    rdfs:subClassOf :Store .
+
+:BookmarkAction a owl:Class ;
+    rdfs:label "BookmarkAction"@en ;
+    rdfs:comment "An agent bookmarks/flags/labels/tags/marks an object."@en ;
+    rdfs:isDefinedBy <https://schema.org/BookmarkAction> ;
+    rdfs:subClassOf :OrganizeAction .
+
+:BowlingAlley a owl:Class ;
+    rdfs:label "BowlingAlley"@en ;
+    rdfs:comment "A bowling alley."@en ;
+    rdfs:isDefinedBy <https://schema.org/BowlingAlley> ;
+    rdfs:subClassOf :SportsActivityLocation .
+
+:Brewery a owl:Class ;
+    rdfs:label "Brewery"@en ;
+    rdfs:comment "Brewery."@en ;
+    rdfs:isDefinedBy <https://schema.org/Brewery> ;
+    rdfs:subClassOf :FoodEstablishment .
+
+:Bridge a owl:Class ;
+    rdfs:label "Bridge"@en ;
+    rdfs:comment "A bridge."@en ;
+    rdfs:isDefinedBy <https://schema.org/Bridge> ;
+    rdfs:subClassOf :CivicStructure .
+
+:BrokerageAccount a owl:Class ;
+    rdfs:label "BrokerageAccount"@en ;
+    rdfs:comment "An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm."@en ;
+    rdfs:isDefinedBy <https://pending.schema.org/BrokerageAccount> ;
+    rdfs:subClassOf :InvestmentOrDeposit .
+
+:BuddhistTemple a owl:Class ;
+    rdfs:label "BuddhistTemple"@en ;
+    rdfs:comment "A Buddhist temple."@en ;
+    rdfs:isDefinedBy <https://schema.org/BuddhistTemple> ;
+    rdfs:subClassOf :PlaceOfWorship .
+
+:BusReservation a owl:Class ;
+    rdfs:label "BusReservation"@en ;
+    rdfs:comment """A reservation for bus travel. <br/><br/>
+
+Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use <a href="http://schema.org/Offer">Offer</a>."""@en ;
+    rdfs:isDefinedBy <https://schema.org/BusReservation> ;
+    rdfs:subClassOf :Reservation .
+
+:BusinessEvent a owl:Class ;
+    rdfs:label "BusinessEvent"@en ;
+    rdfs:comment "Event type: Business event."@en ;
+    rdfs:isDefinedBy <https://schema.org/BusinessEvent> ;
+    rdfs:subClassOf :Event .
+
+:CafeOrCoffeeShop a owl:Class ;
+    rdfs:label "CafeOrCoffeeShop"@en ;
+    rdfs:comment "A cafe or coffee shop."@en ;
+    rdfs:isDefinedBy <https://schema.org/CafeOrCoffeeShop> ;
+    rdfs:subClassOf :FoodEstablishment .
+
+:Campground a owl:Class ;
+    rdfs:label "Campground"@en ;
+    rdfs:comment """A camping site, campsite, or campground is a place used for overnight stay in the outdoors. In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or parks a camper; a campground may contain many campsites (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Campsite">http://en.wikipedia.org/wiki/Campsite</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>."""@en ;
+    rdfs:isDefinedBy <https://schema.org/Campground> ;
+    rdfs:subClassOf :CivicStructure,
+        :LodgingBusiness .
+
+:CampingPitch a owl:Class ;
+    rdfs:label "CampingPitch"@en ;
+    rdfs:comment """A camping pitch is an individual place for overnight stay in the outdoors, typically being part of a larger camping site.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>."""@en ;
+    rdfs:isDefinedBy <https://schema.org/CampingPitch> ;
+    rdfs:subClassOf :Accommodation .
+
+:Canal a owl:Class ;
+    rdfs:label "Canal"@en ;
+    rdfs:comment "A canal, like the Panama Canal."@en ;
+    rdfs:isDefinedBy <https://schema.org/Canal> ;
+    rdfs:subClassOf :BodyOfWater .
+
+:CancelAction a owl:Class ;
+    rdfs:label "CancelAction"@en ;
+    rdfs:comment """The act of asserting that a future event/action is no longer going to happen.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/ConfirmAction">ConfirmAction</a>: The antonym of CancelAction.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/CancelAction> ;
+    rdfs:subClassOf :PlanAction .
+
+:Casino a owl:Class ;
+    rdfs:label "Casino"@en ;
+    rdfs:comment "A casino."@en ;
+    rdfs:isDefinedBy <https://schema.org/Casino> ;
+    rdfs:subClassOf :EntertainmentBusiness .
+
+:CatholicChurch a owl:Class ;
+    rdfs:label "CatholicChurch"@en ;
+    rdfs:comment "A Catholic church."@en ;
+    rdfs:isDefinedBy <https://schema.org/CatholicChurch> ;
+    rdfs:subClassOf :PlaceOfWorship .
+
+:Cemetery a owl:Class ;
+    rdfs:label "Cemetery"@en ;
+    rdfs:comment "A graveyard."@en ;
+    rdfs:isDefinedBy <https://schema.org/Cemetery> ;
+    rdfs:subClassOf :CivicStructure .
+
+:CheckAction a owl:Class ;
+    rdfs:label "CheckAction"@en ;
+    rdfs:comment "An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state."@en ;
+    rdfs:isDefinedBy <https://schema.org/CheckAction> ;
+    rdfs:subClassOf :FindAction .
+
+:CheckInAction a owl:Class ;
+    rdfs:label "CheckInAction"@en ;
+    rdfs:comment """The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/CheckOutAction">CheckOutAction</a>: The antonym of CheckInAction.</li>
+<li><a href="http://schema.org/ArriveAction">ArriveAction</a>: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.</li>
+<li><a href="http://schema.org/ConfirmAction">ConfirmAction</a>: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the <em>start</em> of a previously reserved service rather than its validity/existence.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/CheckInAction> ;
+    rdfs:subClassOf :CommunicateAction .
+
+:CheckOutAction a owl:Class ;
+    rdfs:label "CheckOutAction"@en ;
+    rdfs:comment """The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check in) or place (e.g. hotel).<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><a href="http://schema.org/CheckInAction">CheckInAction</a>: The antonym of CheckOutAction.</li>
+<li><a href="http://schema.org/DepartAction">DepartAction</a>: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.</li>
+<li><a href="http://schema.org/CancelAction">CancelAction</a>: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.</li>
+</ul>
+"""@en ;
+    rdfs:isDefinedBy <https://schema.org/CheckOutAction> ;
+    rdfs:subClassOf :CommunicateAction .
+
+:CheckoutPage a owl:Class ;
+    rdfs:label "CheckoutPage"@en ;
+    rdfs:comment "Web page type: Checkout page."@en ;
+    rdfs:isDefinedBy <https://schema.org/CheckoutPage> ;
+    rdfs:subClassOf :WebPage .
+
+:ChildCare a owl:Class ;
+    rdfs:label "ChildCare"@en ;
+    rdfs:comment "A Childcare center."@en ;
+    rdfs:isDefinedBy <https://schema.org/ChildCare> ;
+    rdfs:subClassOf :LocalBusiness .
+
+:ChildrensEvent a owl:Class ;
+    rdfs:label "ChildrensEvent"@en ;
+    rdfs:comment "Event type: Children's event."@en ;
+    rdfs:isDefinedBy <https://schema.org/ChildrensEvent> ;
+    rdfs:subClassOf :Event .
+
+:Church a owl:Class ;
+    rdfs:label "Church"@en ;
+    rdfs:comment "A church."@en ;
+    rdfs:isDefinedBy <https://schema.org/Church> ;
+    rdfs:subClassOf :PlaceOfWorship .
+
+:City a owl:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A city or town."@en ;
+    rdfs:isDefinedBy <https://schema.org/City> ;
+    rdfs:subClassOf :AdministrativeArea .
+
+:CityHall a owl:Class ;
+    rdfs:label "CityHall"@en ;
+    rdfs:comment "A city hall."@en ;
+    rdfs:isDefinedBy <https://schema.org/CityHall> ;
+    rdfs:subClassOf :GovernmentBuilding .
+
+:ClothingStore a owl:Class ;
+    rdfs:label "ClothingStore"@en ;
+    rdfs:comment "A clothing store."@en ;
+    rdfs:isDefinedBy <https://schema.org/ClothingStore> ;
+    rdfs:subClassOf :Store .
+
+:Code a owl:Class ;
+    rdfs:label "Code"@en ;
+    rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
+    rdfs:isDefinedBy <https://schema.org/Code> ;
+    rdfs:subClassOf :CreativeWork .
+
+:Collection a owl:Class ;
+    rdfs:label "Collection"@en ;
+    rdfs:comment "A created collection of Creative Works or other artefacts."@en ;
+    rdfs:isDefinedBy <https://bib.schema.org/Collection> ;
+    rdfs:subClassOf :CreativeWork .
+
+:CollegeOrUniversity a owl:Class ;
+    rdfs:label "CollegeOrUniversity"@en ;
+    rdfs:comment "A college, university, or other third-level educational institution."@en ;
+    rdfs:isDefinedBy <https://schema.org/CollegeOrUniversity> ;
+    rdfs:subClassOf :EducationalOrganization .
+
+:ComedyClub a owl:Class ;
+    rdfs:label "ComedyClub"@en ;
+    rdfs:comment "A comedy club."@en ;
+    rdfs:isDefinedBy <https://schema.org/ComedyClub> ;
+    rdfs:subClassOf :EntertainmentBusiness .
+
+:ComedyEvent a owl:Class ;
+    rdfs:label "ComedyEvent"@en ;
+    rdfs:comment "Event type: Comedy event."@en ;
+    rdfs:isDefinedBy <https://schema.org/ComedyEvent> ;
+    rdfs:subClassOf :Event .

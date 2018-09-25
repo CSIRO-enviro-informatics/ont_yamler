@@ -39,8 +39,8 @@ def export_classes_as_yaml(g, filename, ont_yaml_dir):
 
     for c in g.query(q):
         yaml += str(c['c']) + ': ' + '\n'
-        yaml += '  label: ' + str(c['label']) + '\n'
-        yaml += '  description: ' + str(c['comment']).replace('\n', ' ').replace('\r', '').replace('  ', '') + '\n\n'
+        yaml += '  label: ' + yaml_str(c['label'])
+        yaml += '  description: ' + yaml_str(c['comment']) + '\n'
 
     with open(os.path.join(ont_yaml_dir, name.split('.')[0] + '_classes.yml'), 'w', encoding='utf-8') as f:
         f.write(yaml)
@@ -70,6 +70,8 @@ def export_properties_as_yaml(g, filename, ont_yaml_dir):
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     SELECT ?c ?label ?comment
     WHERE {
+        {?c a rdf:Property .}
+        UNION    
         {?c a rdfs:Property .}
         UNION
         {?c a owl:AnnotationProperty .}
@@ -86,11 +88,16 @@ def export_properties_as_yaml(g, filename, ont_yaml_dir):
 
     for c in g.query(q):
         yaml += str(c['c']) + ': ' + '\n'
-        yaml += '  label: ' + str(c['label']) + '\n'
-        yaml += '  description: ' + str(c['comment']).replace('\n', ' ').replace('\r', '').replace('  ', '') + '\n\n'
+        yaml += '  label: ' + yaml_str(c['label'])
+        yaml += '  description: ' + yaml_str(c['comment']) + '\n'
 
     with open(os.path.join(ont_yaml_dir, name.split('.')[0] + '_properties.yml'), 'w', encoding='utf-8') as f:
         f.write(yaml)
+
+
+def yaml_str(i):
+    return '"' + str(i).replace('\n', ' ').replace('\r', '').replace('  ', '').replace('"', '\\"') + '"\n'
+
 
 
 if __name__ == '__main__':

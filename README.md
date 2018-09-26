@@ -5,14 +5,14 @@ A small Python script to process OWL ontology files into YAML files of classes a
 This code is licensed under the GPL v3. See the [LICENSE](LICENSE) deed in this repository for details.
 
 ## Contacts
-**Nicholas Car**
-*Senior Experimental Scientist*
-CSIRO Land & Water
-Dutton Park, QLD, Australia
-<nicholas.car@csiro.au>
+**Nicholas Car**  
+*Senior Experimental Scientist*  
+CSIRO Land & Water  
+Dutton Park, QLD, Australia  
+<nicholas.car@csiro.au>  
 
-**David Bullmore**
-*Software Engineering Student*
-Griffith University
-Gold Coast, QLD, Australia
-<daveabullmore@gmail.com>
+**David Bullmore**  
+*Software Engineering Student*  
+Griffith University  
+Gold Coast, QLD, Australia  
+<daveabullmore@gmail.com>  

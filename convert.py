@@ -99,7 +99,6 @@ def yaml_str(i):
     return '"' + str(i).replace('\n', ' ').replace('\r', '').replace('  ', '').replace('"', '\\"') + '"\n'
 
 
-
 if __name__ == '__main__':
     APP_DIR = path.dirname(path.realpath(__file__))
     ONTS_TO_PROCESS_DIR = path.join(APP_DIR, 'onts_to_process')

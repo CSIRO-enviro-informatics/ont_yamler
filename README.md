@@ -10,3 +10,9 @@ This code is licensed under the GPL v3. See the [LICENSE](LICENSE) deed in this 
 CSIRO Land & Water
 Dutton Park, QLD, Australia
 <nicholas.car@csiro.au>
+
+**David Bullmore**
+*Software Engineering Student*
+Griffith University
+Gold Coast, QLD, Australia
+<daveabullmore@gmail.com>
